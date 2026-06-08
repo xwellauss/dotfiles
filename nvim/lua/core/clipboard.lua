@@ -1,5 +1,6 @@
 vim.cmd('set clipboard+=unnamedplus')
 
+--[[
 vim.g.clipboard = {
 	name = 'win32yank',
 	copy = {
@@ -12,3 +13,4 @@ vim.g.clipboard = {
 	},
 	cache_enabled = true,
 }
+--]]

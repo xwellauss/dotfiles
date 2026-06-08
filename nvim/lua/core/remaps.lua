@@ -16,20 +16,19 @@ end
 
 vim.cmd('command! Q q')
 vim.cmd('command! Qa qa')
-nmap('<c-s>', ':w<CR>')
-nmap('<c-o>', ':e C:\\Users\\91863\\AppData\\Local\\nvim<CR>')
+--nmap('<c-s>', ':w<CR>')
 
 -- Buffer Remaps
-nmap('<c-k>', ':wincmd k<CR>')
-nmap('<c-j>', ':wincmd j<CR>')
-nmap('<c-h>', ':wincmd h<CR>')
-nmap('<c-l>', ':wincmd l<CR>')
+--nmap('<c-k>', ':wincmd k<CR>')
+--nmap('<c-j>', ':wincmd j<CR>')
+--nmap('<c-h>', ':wincmd h<CR>')
+--nmap('<c-l>', ':wincmd l<CR>')
 ----
 
 -- Nvim Tree
-nmap('<c-t>', ':NvimTreeToggle<CR>')
+--nmap('<c-t>', ':NvimTreeToggle<CR>')
 --
 
-nmap('<c-h>', ':noh<CR>')
+--nmap('<c-h>', ':noh<CR>')
 noremap('<C-Left>', ':tabprevious<CR>')
 noremap('<C-Right>', ':tabnext<CR>')

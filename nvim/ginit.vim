@@ -1,1 +1,2 @@
-GuiFont! JetBrainsMonoNL Nerd Font Mono:h11.5
+GuiFont! JetBrainsMonoNL Nerd Font Mono:h13
+

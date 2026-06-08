@@ -1,77 +1,103 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-local packer_bootstrap = ensure_packer()
+return require('lazy').setup({
+  defaults = {
+	  lazy = true,
+	  version = nil,
+  },
 
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
- 
   -- Themes
-  use 'Mofiqul/vscode.nvim'
-  use 'ellisonleao/gruvbox.nvim'
-  use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
-  use 'nyoom-engineering/oxocarbon.nvim'
-  use "Alexis12119/nightly.nvim"
-  use "felipeagc/fleet-theme-nvim"
-  use "doums/darcula"
-  use "junegunn/seoul256.vim"
-  use "dasupradyumna/midnight.nvim"
+  "Mofiqul/vscode.nvim",
+  "ellisonleao/gruvbox.nvim",
+  { "bluz71/vim-moonfly-colors", name = "moonfly" },
+  "nyoom-engineering/oxocarbon.nvim",
+  "Alexis12119/nightly.nvim",
+  "felipeagc/fleet-theme-nvim",
+  "doums/darcula",
+  "junegunn/seoul256.vim",
+  "dasupradyumna/midnight.nvim",
+  "folke/tokyonight.nvim",
+  "NLKNguyen/papercolor-theme",
+  "neanias/everforest-nvim",
+--  use "morhetz/gruvbox"
   -----
   
-  use "lukas-reineke/indent-blankline.nvim"
-  use "NvChad/nvim-colorizer.lua"
-  use "windwp/nvim-autopairs"
+  "NvChad/nvim-colorizer.lua",
+  "windwp/nvim-autopairs",
+  {
+    "kylechui/nvim-surround",
+    version = "^4.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    -- Optional: See `:h nvim-surround.configuration` and `:h nvim-surround.setup` for details
+    -- config = function()
+    --     require("nvim-surround").setup({
+    --         -- Put your configuration here
+    --     })
+    -- end
+  },
 
-  use 'romgrk/barbar.nvim'
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+  },
 
-  use {
+  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+
+--  "hiphish/rainbow-delimiters.nvim",
+
+  {
 	'nvim-lualine/lualine.nvim',
-	requires = {
+	dependencies = 
+	{
 	    'nvim-tree/nvim-web-devicons',
 	},
-  }
+  },
 
-  use {
+  {
+  	"MaximilianLloyd/ascii.nvim",
+  	dependencies = {
+	   "MunifTanjim/nui.nvim",
+	},
+  },
+  {
 	'goolord/alpha-nvim',
-	requires = { 'nvim-tree/nvim-web-devicons' },
-  }
+	dependencies = { 'nvim-tree/nvim-web-devicons' },
+  }, 
 
-  use {
-	'nvim-tree/nvim-tree.lua',
-	requires = {
-		'nvim-tree/nvim-web-devicons',
-    },
-  }
+  'neovim/nvim-lspconfig',
 
-  use { 'hrsh7th/nvim-cmp' }
-  use { 'hrsh7th/cmp-nvim-lsp' }
-  use { 'neovim/nvim-lspconfig' }
+  {
+	  'saghen/blink.cmp',
+	  version = '1.*',
+	  dependencies = {
+		  'rafamadriz/friendly-snippets'
+	  }
+  },
 
-  use {
+  {
 	'nvim-telescope/telescope.nvim', 
-	branch = '0.1.x',
-	requires = {
-		{'nvim-lua/plenary.nvim'} 
+	branch = 'master',
+	dependencies = {
+		{'nvim-lua/plenary.nvim'},
+		{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	}
+  },
+
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate'
   }
 
-  use {
-	'nvim-treesitter/nvim-treesitter',
---		'rush-rs/tree-sitter-asm',
-	run = ':TSUpdate'
-  }
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+})
