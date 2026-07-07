@@ -1,7 +1,7 @@
 require("core.plugin_config.lualine")
 require("core.plugin_config.alpha")
-require("core.plugin_config.bufferline")
---require("core.plugin_config.neo-tree")
+--require("core.plugin_config.bufferline")
+require("core.plugin_config.oil-nvim")
 
 require("core.plugin_config.telescope")
 require("core.plugin_config.treesitter")

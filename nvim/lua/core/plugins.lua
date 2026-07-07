@@ -19,6 +19,9 @@ return require('lazy').setup({
 
   -- Themes
   "Mofiqul/vscode.nvim",
+  "lunarvim/darkplus.nvim",
+  "marko-cerovac/material.nvim",
+  "navarasu/onedark.nvim",
   "ellisonleao/gruvbox.nvim",
   { "bluz71/vim-moonfly-colors", name = "moonfly" },
   "nyoom-engineering/oxocarbon.nvim",
@@ -30,6 +33,11 @@ return require('lazy').setup({
   "folke/tokyonight.nvim",
   "NLKNguyen/papercolor-theme",
   "neanias/everforest-nvim",
+  "rebelot/kanagawa.nvim",
+  "EdenEast/nightfox.nvim",
+  "aktersnurra/no-clown-fiesta.nvim",
+  "marekh19/meowsoot.nvim",
+  "oskarnurm/koda.nvim",
 --  use "morhetz/gruvbox"
   -----
   
@@ -62,6 +70,12 @@ return require('lazy').setup({
 	{
 	    'nvim-tree/nvim-web-devicons',
 	},
+  },
+
+  {
+	  'stevearc/oil.nvim',
+	  dependencies = {'nvim-tree/nvim-web-devicons'},
+	  lazy = false
   },
 
   {

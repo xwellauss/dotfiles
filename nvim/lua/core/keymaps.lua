@@ -5,7 +5,6 @@ vim.keymap.set('n', '<leader>nh', ':nohlsearch<CR>')
 
 vim.keymap.set('n', '<c-s>', ':w<CR>')
 vim.keymap.set('n', '<leader>s', ':w<CR>')
-vim.keymap.set('n', '<leader>q', ':q<CR>')
 
 --vim.keymap.set('n', '<leader>q', ':q<CR>')
 
@@ -25,5 +24,7 @@ vim.keymap.set('n', '<leader>wp', ':vertical resize -2<CR>')
 --vim.keymap.set('n', '<leader>t', ':Neotree<CR>')
 vim.keymap.set('n', '<leader>,', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<leader>.', ':bnext<CR>', opts)
+vim.keymap.set('n', '<leader>q', ':bdelete<CR>')
+vim.keymap.set('n', '-', ':Oil<CR>')
 
 vim.keymap.set("x", "p", [["_dP]], { remap = false })
