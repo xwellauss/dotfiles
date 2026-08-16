@@ -5,11 +5,17 @@ SAVEHIST=10000
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 
+autoload -Uz compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
-setopt AUTOCD
+
 setopt NOBEEP
 setopt NUMERIC_GLOB_SORT
 
-source "$ZDOTDIR/aliases.zsh"
-source "$ZDOTDIR/prompt.zsh"
+source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
+source "$XDG_CONFIG_HOME/zsh/prompt.zsh"
 

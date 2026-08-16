@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    },
+    "disable_git": true
+  },
+  "base_keymap": "VSCode",
   "tabs": {
     "file_icons": true
   },
@@ -30,7 +37,7 @@
   "show_wrap_guides": false,
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "icon_theme": "Material Icon Theme",
-  "vim_mode": false,
+  "vim_mode": true,
   "ui_font_size": 17.5,
   "buffer_font_size": 16.0,
   "theme": {

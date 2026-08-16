@@ -3,6 +3,6 @@ local PROMPT_SYMBOL=''
 PROMPT="%F{green}%n@%m%f %F{blue}%/%f %F{white}$PROMPT_SYMBOL%f "
 GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 
-source "$ZDOTDIR/.ls_colors.sh"
+source "$XDG_CONFIG_HOME/zsh/.ls_colors.sh"
 export GREP_COLORS
 export PROMPT
