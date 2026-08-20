@@ -3,6 +3,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 
@@ -19,3 +21,4 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/opt/premake5:$PATH"
 export PATH="$HOME/.local/opt/clipboard/bin:$PATH"
 export PATH="$HOME/.local/opt/gradle-8.5/bin:$PATH"
+. "$HOME/.cargo/env"

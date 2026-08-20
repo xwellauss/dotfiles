@@ -12,7 +12,6 @@ else
   compinit -C
 fi
 
-
 setopt NOBEEP
 setopt NUMERIC_GLOB_SORT
 
