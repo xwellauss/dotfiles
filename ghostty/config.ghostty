@@ -1,0 +1,48 @@
+font-family = UbuntuMono
+font-family-bold = UbuntuMono Bold
+font-family-italic = UbuntuMono Italic
+font-family-bold-italic = UbuntuMono Bold Italic
+font-size = 12.2
+
+# shell-integration-features = no-cursor
+cursor-style = block
+window-decoration = false
+window-save-state = always
+
+# Theme
+background = 111111
+foreground = ffffff
+cursor-color = ffffff
+cursor-text = 000000
+selection-background = 264f78
+selection-foreground = ffffff
+palette = 0=#000000
+palette = 8=#666666
+palette = 1=#cd3131
+palette = 9=#f14c4c
+palette = 2=#0dbc79
+palette = 10=#23d18b
+palette = 3=#e5e510
+palette = 11=#f6f643
+palette = 4=#2472c8
+palette = 12=#3b8eea
+palette = 5=#bc3fbc
+palette = 13=#d670d6
+palette = 6=#11a8cd
+palette = 14=#29b8db
+palette = 7=#ffffff
+palette = 15=#e4e4e4
+
+# Keybinds
+keybind = ctrl+shift+f=new_window
+keybind = ctrl+shift+t=new_tab
+
+keybind = ctrl+shift+l=resize_split:left,10
+keybind = ctrl+shift+h=resize_split:right,10
+keybind = ctrl+shift+k=resize_split:up,10
+keybind = ctrl+shift+j=resize_split:down,3
+
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+j=goto_split:down

@@ -2,3 +2,6 @@ color=1e1e2e
 indicator-radius=80
 show-failed-attempts
 ignore-empty-password
+effect-blur=7x5
+effect-vignette=0.5:0.5
+clock
