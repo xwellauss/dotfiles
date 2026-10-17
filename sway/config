@@ -1,0 +1,64 @@
+set $term kitty
+
+output eDP-1 scale 1.25
+
+set $menu rofi -show drun
+
+set $mod Mod4
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+bindsym $mod+Return exec $term
+bindsym $mod+space exec $menu
+
+bindsym $mod+Shift+q kill
+
+exec_always wpaperd
+
+bindsym $mod+$left focus left
+bindsym $mod+$right focus right
+bindsym $mod+$up focus up
+bindsym $mod+$down focus down
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$down move down
+
+mode "resize" {
+	bindsym h resize shrink width 10px
+	bindsym j resize grow height 10px
+	bindsym k resize shrink height 10px
+	bindsym l resize grow width 10px
+}
+bindsym $mod+r mode "resize"
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+
+bindsym $mod+v split v
+bindsym $mod+b split h
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit Sway?' -B 'Yes' 'swaymsg exit'
+
+bar {
+	status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+}
+
+input * {
+	xkb_layout us
+}
+
+output * bg #1e1e2e solid_color

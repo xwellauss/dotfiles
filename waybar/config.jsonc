@@ -1,0 +1,28 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 26,
+    "spacing": 4,
+    "modules-left": ["niri/workspaces", "niri/window"],
+    "modules-center": [],
+    "modules-right": ["clock", "pulseaudio", "backlight", "network", "battery", "tray"],
+
+    "niri/workspaces": { "format": "{index}" },
+    "niri/window": { "max-length": 50 },
+    "clock": { "format": "{:%a %d %b  %H:%M}" },
+    "pulseaudio": { "format": "vol {volume}%", "format-muted": "muted", "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" },
+    // "backlight": { "format": "bri {percent}%" },
+	"backlight": {
+		"format": "bri {percent}%",
+	},
+    // "network": { "format-wifi": "{essid}", "format-ethernet": "eth", "format-disconnected": "offline" },
+	"network": {
+		"format-wifi": "{essid} {signalStrength}%",
+		"format-ethernet": "eth",
+		"format-disconnected": "offline",
+		"tooltip-format": "{ifname} {ipaddr}",
+		"on-click": "kitty -e nmtui"
+	},
+    "battery": { "format": "bat {capacity}%", "format-charging": "chg {capacity}%" },
+    "tray": { "spacing": 8 }
+}

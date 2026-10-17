@@ -1,0 +1,32 @@
+[font]
+size = 12.2
+
+[font.bold]
+family = "JetBrainsMonoNL"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMonoNL"
+style = "Italic"
+
+[font.italic]
+family = "JetBrainsMonoNL"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMonoNL"
+style = "Regular"
+
+[window]
+title = "Alacritty"
+
+[window.dimensions]
+columns = 90
+lines = 25
+
+[window.padding]
+x = 3
+y = 7
+
+[general]
+import = ["/home/xwellauss/.config/alacritty/dark_plus.toml"]

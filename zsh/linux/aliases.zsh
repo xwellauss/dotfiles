@@ -16,6 +16,8 @@ load_nvm() {
     fi
 }
 
+alias github_ssh="ssh-add ~/.ssh/id_ed25519"
+
 
 alias ls='ls --color=auto'                 # classify files in colour
 alias dir='ls --color=auto --format=vertical'

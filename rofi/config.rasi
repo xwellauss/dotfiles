@@ -1,0 +1,52 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "breeze-dark";
+    font: "Ubuntu Mono 14";
+}
+* {
+    bg: #0d0d10;
+    bg-alt: #1a1a1e;
+    fg: #ffffff;
+	fg-dim: #dddddd;
+    accent: #7d38eb;
+}
+window {
+    background-color: @bg;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 12px;
+    width: 600px;
+}
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 14px;
+}
+entry { text-color: @fg; }
+prompt { text-color: @accent; enabled: false; }
+listview {
+    lines: 6;
+    padding: 10px 0;
+}
+element {
+    padding: 10px 14px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+element normal.normal, element alternate.normal {
+    background-color: transparent;
+}
+element-text {
+    font: "Ubuntu Mono 14";
+    text-color: @fg-dim;
+    background-color: transparent;
+}
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+element selected element-text {
+    text-color: @bg;
+}

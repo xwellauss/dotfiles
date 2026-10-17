@@ -41,6 +41,7 @@ return require('lazy').setup({
     "aktersnurra/no-clown-fiesta.nvim",
     "marekh19/meowsoot.nvim",
     "oskarnurm/koda.nvim",
+	"oxidescheme/nvim",
     -----
     "NvChad/nvim-colorizer.lua",
     "windwp/nvim-autopairs",

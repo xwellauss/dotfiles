@@ -16,6 +16,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- Configure and enable clangd (Blink capabilities are added globally by the plugin)
 vim.lsp.config('clangd', {
   cmd = {'clangd', '--function-arg-placeholders=0', '--header-insertion=never'},
+  filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
   capabilities = {
     textDocument = {
       completion = {
@@ -27,5 +28,12 @@ vim.lsp.config('clangd', {
   }
 })
 
+vim.lsp.config('pyright', {
+  cmd = { 'pyright-langserver', '--stdio' },
+  filetypes = { 'python' },
+})
+
+
 vim.lsp.enable('clangd')
+vim.lsp.enable('pyright')
 

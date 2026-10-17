@@ -18,4 +18,4 @@ require("onedark").setup({
 })
 
 
-vim.cmd('colorscheme fleet')
+vim.cmd('colorscheme oxide')

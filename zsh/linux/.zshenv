@@ -14,11 +14,12 @@ export GPG_TTY=$(tty)
 export NVM_DIR="$HOME/.config/nvm"
 export ANDROID_HOME="/mnt/E278E1D278E1A58F/dev/programs/Android_SDK"
 export ANDROID_NDK_HOME="/mnt/E278E1D278E1A58F/dev/programs/Android_SDK/ndk/25.1.8937393/"
-export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
+export JAVA_HOME="/usr/lib/jvm/java-25-openjdk"
 export PATH=${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/30.0.3:$JAVA_HOME/bin
 export PATH="$ANDROID_NDK_HOME:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/opt/premake5:$PATH"
 export PATH="$HOME/.local/opt/clipboard/bin:$PATH"
 export PATH="$HOME/.local/opt/gradle-8.5/bin:$PATH"
+export PATH="$HOME/.local/opt/Digital-Logic-Sim:$PATH"
 . "$HOME/.cargo/env"

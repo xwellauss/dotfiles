@@ -1,6 +1,6 @@
 require('lualine').setup {
 	options = {
-		theme = 'codedark',
+		-- theme = 'oxide',
 		icons_enabled = true,
 	}
 }
