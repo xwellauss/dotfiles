@@ -13,4 +13,7 @@ ln -sr waybar ~/.config/waybar
 ln -sr niri ~/.config/niri
 ln -sr nvim ~/.config/nvim
 ln -sr kitty ~/.config/kitty
+ln -sr zsh ~/.config/zsh
+ln -sr zed ~/.config/zed
+ln -sr mako ~/.config/mako
 ```
