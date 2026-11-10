@@ -44,7 +44,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "wpaperd"
 spawn-at-startup "mako"
-spawn-sh-at-startup "swayidle -w timeout 120 'swaylock -f' timeout 150 'niri msg action power-off-monitors' before-sleep 'swaylock -f'"
+spawn-sh-at-startup "swayidle -w timeout 1800 'swaylock -f' timeout 2400 'niri msg action power-off-monitors' before-sleep 'swaylock -f'"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
